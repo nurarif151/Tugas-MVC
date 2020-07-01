@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/daftar', 'RegisterController@daftar');
+
+Route::get('/index', 'RegisterController@index');
+
+Route::get('/welcome1', 'RegisterController@welcome1');
