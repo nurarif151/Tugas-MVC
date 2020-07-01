@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Routing\Route as RoutingRoute;
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\acades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('table');
 });
 
 Route::get('/daftar', 'RegisterController@daftar');
@@ -23,3 +24,11 @@ Route::get('/daftar', 'RegisterController@daftar');
 Route::get('/index', 'RegisterController@index');
 
 Route::get('/welcome1', 'RegisterController@welcome1');
+
+Route::get('/template', function () {
+    return view('template');
+});
+
+Route::get('/master', function () {
+    return view('admin.Master');
+});
